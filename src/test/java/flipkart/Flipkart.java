@@ -1,9 +1,15 @@
 package flipkart;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
 import java.util.Hashtable;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -209,4 +215,16 @@ public class Flipkart
 		return outputParameters;
 	}
 	
+	
+	public static Hashtable<String, Object> takeScreenshot() throws IOException
+	{
+		Date currentdate= new Date();
+		String screenshotfilename=currentdate.toString().replace(" ", "-").replace(":","-");
+		System.out.println(screenshotfilename);
+
+		File screenshotFile =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(screenshotFile, new File("P://screenshot//"+ screenshotfilename + ".png"));
+		
+		return outputParameters;
+	}
 }

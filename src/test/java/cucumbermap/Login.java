@@ -103,5 +103,10 @@ public class Login
 		 Flipkart.browserClose();
 	}
 
-
+	@Then("^take screenshot$")
+	public void take_screenshot() throws Throwable 
+	{
+	   Thread.sleep(5000);
+	   Flipkart.takeScreenshot();
+	}
 }

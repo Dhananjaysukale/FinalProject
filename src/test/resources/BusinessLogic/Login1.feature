@@ -23,6 +23,7 @@ When user "<Username>" as username
 When user "<Password>" as password
 When user click on login button
 Then Application shows user profile to user
+And take screenshot
 Then browser close
 
 Examples:
