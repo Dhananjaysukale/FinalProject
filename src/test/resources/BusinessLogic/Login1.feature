@@ -13,6 +13,7 @@ When user "8149275960" as username
 When user "lumia720" as password
 When user click on login button
 Then Application shows user profile to user
+And take screenshot
 Then browser close
 
 @SmokeTest

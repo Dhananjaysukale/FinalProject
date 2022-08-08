@@ -223,7 +223,7 @@ public class Flipkart
 		System.out.println(screenshotfilename);
 
 		File screenshotFile =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshotFile, new File("P://screenshot//"+ screenshotfilename + ".png"));
+		FileUtils.copyFile(screenshotFile, new File("F://screenshot//"+ screenshotfilename + ".png"));
 		
 		return outputParameters;
 	}
